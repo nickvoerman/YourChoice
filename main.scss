@@ -1,0 +1,125 @@
+@import "assets/styles/_reset.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+$lightgrey: #C4C4C4;
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+
+// top section
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $lightgrey;
+    padding: 2rem;
+    margin-bottom: 5rem;
+
+    p {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+// result section
+.result {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    padding: 0 10rem;
+
+    &__image {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    &__form-input {
+        font-size: 2rem;
+        width: 25rem;
+        background-color: black;
+        margin-bottom: 1rem;
+        color: white;
+        padding: 1rem;
+
+        p {
+            margin-bottom: 1rem;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 15rem;
+        height: 5rem;
+        border-radius: 5rem;
+        background-color: $lightgrey;
+        padding: 0 1rem;
+
+        p {
+            font-size: 2.4rem;
+            font-weight: bolder;
+        }
+    }
+}
+
+.add-client {
+    padding: 0 10rem;
+    margin-bottom: 5rem;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 25rem;
+    }
+    
+    &__input {
+        background-color: black;
+        color: white;
+        margin-bottom: 2rem;
+        padding: 1rem;
+    }
+
+    &__button {
+        background-color: black;
+        color: white;
+        padding: 1rem;
+    }
+}
+
+//login page
+.login-form {
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    &__input {
+        padding: 1rem;
+        background-color: black;
+        color: white;
+        margin-bottom: 1rem;
+    }
+
+    &__button {
+        padding: 1rem;
+        background-color: black;
+        color: white;
+    }
+}
