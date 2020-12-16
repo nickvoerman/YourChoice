@@ -12,6 +12,32 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <div id="properties" class="properties inactive">
+      <div class="property">
+        Connected: <span id="connected" class="value"></span>
+      </div>
+      <div class="property">
+        Button A: <span id="buttonA" class="value"></span>
+      </div>
+
+      <div class="property">
+        Button B: <span id="buttonB" class="value"></span>
+      </div>
+
+      <div class="property">
+        Accelerometer: X:<span id="acc_X" class="value"></span>, Y:<span id="acc_Y" class="value"></span>, Z:<span id="acc_Z" class="value"></span>
+      </div>
+
+      <div class="property">
+        Temperature: <span id="temp" class="value"></span>
+      </div>
+
+      <div class="property">
+        Magnetometer bearing: <span id="bearing" class="value"></span>
+      </div>
+
+    </div>
+    <button id="searchButton" onClick="searchDevice()">search device</button>
     
     <div class="header">
         <p>Dashboard</p>
@@ -80,5 +106,36 @@
     </div>
 
 <script src="assets/js/main.js"></script>
+<script src="assets/js/microBit.js"></script>
+<script>
+microBit=new uBit();
+
+microBit.onConnect(function(){
+  console.log("connected");
+
+  document.getElementById("connected").innerHTML="true";
+  document.getElementById("properties").classList.toggle('inactive');
+});
+  microBit.onDisconnect(function(){
+  console.log("disconnected");
+  document.getElementById("connected").innerHTML="false";
+});
+microBit.onBleNotify(function(){
+  document.getElementById("buttonA").innerHTML=microBit.getButtonA();
+  document.getElementById("buttonB").innerHTML=microBit.getButtonB();
+
+  document.getElementById("acc_X").innerHTML=microBit.getAccelerometer().x;
+  document.getElementById("acc_Y").innerHTML=microBit.getAccelerometer().y;
+  document.getElementById("acc_Z").innerHTML=microBit.getAccelerometer().z;
+
+  document.getElementById("temp").innerHTML=microBit.getTemperature();
+  document.getElementById("bearing").innerHTML=microBit.getBearing();
+})
+
+
+function searchDevice(){
+  microBit.searchDevice();
+}
+</script>
 </body>
 </html>
