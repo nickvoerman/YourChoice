@@ -39,9 +39,7 @@ html {
     &__form {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
+        height: 55rem;
     }
 
     &__form-input {
@@ -84,6 +82,7 @@ html {
 }
 
 .add-client {
+    height: 52rem;
     padding: 0 10rem;
     margin-bottom: 5rem;
 

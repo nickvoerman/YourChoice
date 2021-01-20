@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 20 jan 2021 om 15:32
--- Serverversie: 10.4.17-MariaDB
--- PHP-versie: 8.0.1
+-- Gegenereerd op: 20 jan 2021 om 16:31
+-- Serverversie: 10.4.11-MariaDB
+-- PHP-versie: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -54,7 +54,7 @@ CREATE TABLE `klant` (
   `gezin` int(255) NOT NULL,
   `allergie` varchar(255) NOT NULL,
   `voorkeuren` varchar(255) NOT NULL,
-  `vingerpint` varchar(255) NOT NULL,
+  `vingerprint` varchar(255) NOT NULL,
   `voedselbank` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -62,9 +62,9 @@ CREATE TABLE `klant` (
 -- Gegevens worden geëxporteerd voor tabel `klant`
 --
 
-INSERT INTO `klant` (`id`, `naam`, `box`, `gezin`, `allergie`, `voorkeuren`, `vingerpint`, `voedselbank`) VALUES
-(0, 'Younes', '2', 3, 'pinda', 'chocola', '224234', '2'),
-(1, 'Younes', '2', 3, 'pinda', 'chocola', '123', '2');
+INSERT INTO `klant` (`id`, `naam`, `box`, `gezin`, `allergie`, `voorkeuren`, `vingerprint`, `voedselbank`) VALUES
+(0, 'Younes', '2', 3, 'pinda', 'chocola', '1', '2'),
+(1, 'nick', '2', 3, 'pinda', 'chocola', '2', '2');
 
 -- --------------------------------------------------------
 
@@ -82,7 +82,7 @@ CREATE TABLE `vingerid` (
 --
 
 INSERT INTO `vingerid` (`id`, `vinger_id`) VALUES
-(1, 224234);
+(1, 2);
 
 -- --------------------------------------------------------
 

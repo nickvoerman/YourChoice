@@ -95,6 +95,33 @@ function editUser() {
   })
 }
 
+let vingerprint = 0;
+
+function isnotthesame() {
+
+  fetch('http://localhost/YourChoice/includes/vingerprint.php', {
+    method: 'get',
+    // may be some code of fetching comes here
+  }).then(function (response) {
+    if (response.status >= 200 && response.status < 300) {
+      return response.text()
+    }
+    throw new Error(response.statusText)
+  })
+    .then(function (response) {
+      console.log(response);
+
+      if (vingerprint != response) {
+        vingerprint = response;
+
+        refresh();
+
+      } else {
+        console.log("false");
+      }
+    })
+}
+
 //request function
 function Request(link, method, data) {
 
@@ -134,3 +161,22 @@ function Request(link, method, data) {
     })
   })
 }
+
+
+
+//refresh the add and info forms with the current vingerid
+
+function refresh() {
+  const add = document.querySelector('.js-add');
+  const info = document.querySelector('.js-info');
+
+  info.innerHTML = "";
+  $(info).load("http://localhost/YourChoice/info.php");
+  
+  add.innerHTML = "";
+  $(add).load("http://localhost/YourChoice/add.php");
+
+}
+
+//refresh every 1 sec
+setInterval(function(){ isnotthesame() }, 2000);
