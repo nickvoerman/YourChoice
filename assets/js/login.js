@@ -31,7 +31,7 @@ console.log(password.value)
       return;
     }
 
-    alert(data.message);
+    // alert(data.message);
     window.location.href = "index.php";
   })
 }

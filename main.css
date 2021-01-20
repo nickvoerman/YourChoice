@@ -122,10 +122,13 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .result__form-input {
-  font-size: 2rem;
+  font-size: 1.5rem;
   width: 25rem;
   background-color: black;
   margin-bottom: 1rem;
@@ -139,6 +142,11 @@ html {
 
 .result__form-input p:last-child {
   margin: 0;
+}
+
+.result__form-input-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .result__logo {
@@ -190,6 +198,7 @@ html {
   background-color: black;
   color: white;
   padding: 1rem;
+  cursor: pointer;
 }
 
 .login-form {
