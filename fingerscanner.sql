@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 19 nov 2020 om 11:38
+-- Gegenereerd op: 20 jan 2021 om 15:06
 -- Serverversie: 10.4.11-MariaDB
 -- PHP-versie: 7.4.5
 
@@ -39,7 +39,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `naam`, `password`, `voedselbank`) VALUES
-(1, 'nick', 'test', 1);
+(1, 'nick', '$2y$10$vc3K6kPIIghDlVeCG.jivu.Ol1VPLEjQlxhGfZsLVSy9nQ/7JE1ta', 1);
 
 -- --------------------------------------------------------
 
@@ -57,6 +57,14 @@ CREATE TABLE `klant` (
   `vingerpint` varchar(255) NOT NULL,
   `voedselbank` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `klant`
+--
+
+INSERT INTO `klant` (`id`, `naam`, `box`, `gezin`, `allergie`, `voorkeuren`, `vingerpint`, `voedselbank`) VALUES
+(0, 'Younes', '2', 3, 'pinda', 'chocola', '123', '2'),
+(1, 'Younes', '2', 3, 'pinda', 'chocola', '123', '2');
 
 -- --------------------------------------------------------
 
