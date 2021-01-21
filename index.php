@@ -18,12 +18,12 @@
     </div>
 
     <div class="result">
-    
-        <div class="result__form js-info">
-
-            <?php include_once 'info.php' ?>
-
-        </div>
+      <div stlye="display:fex; flex-direction:column;">
+          <div class="result__form js-info">
+              <?php include_once 'info.php' ?>
+          </div>
+          <button class="add-client__button js-edit-button">Edit</button>
+      </div>
 
         <div class="result__logo">
             <p>YourChoice</p>
@@ -38,6 +38,7 @@
         <div class="add-client__form js-add">
             <?php include_once 'add.php' ?>
         </div>
+        <button class="add-client__button js-add-user-button">Voeg toe</button>
     </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

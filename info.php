@@ -35,7 +35,6 @@
         <input class='result__form-input js-edit-preferences' value=" . $row['voorkeuren'] . "><br>";
         echo "<p class='result__form-input-title'>Voedselbank:</p>
         <input class='result__form-input js-edit-foodbank' value=" . $row['voedselbank'] . "><br>";
-        echo '<button class="add-client__button js-edit-button">Edit</button>';
     } else {
         echo "geen user gevonden met deze vingerprint";
     }

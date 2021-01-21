@@ -21,6 +21,4 @@
    }
 ?>
 
-<input class="add-client__input js-add-fingerprint" type="number" placeholder="Vingerafdruk" readonly>
 <input class="add-client__input js-add-foodbank" type="number" placeholder="voedselbank toevoegen">
-<button class="add-client__button js-add-user-button">Voeg toe</button>

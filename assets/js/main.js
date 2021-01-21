@@ -15,6 +15,14 @@ function addUser() {
   const fingerprint = document.querySelector('.js-add-fingerprint');
   const foodbank = document.querySelector('.js-add-foodbank');
 
+  console.log(name.value)
+  console.log(box.value)
+  console.log(size.value)
+  console.log(allergy.value)
+  console.log(preferences.value)
+  console.log(fingerprint.value)
+  console.log(foodbank.value)
+
   //kijk of ze niet leeg zijn
   if (!name.value || !box.value || !size.value || !fingerprint.value || !foodbank.value) {
     return alert("empty fields");
@@ -162,8 +170,6 @@ function Request(link, method, data) {
   })
 }
 
-
-
 //refresh the add and info forms with the current vingerid
 
 function refresh() {
@@ -175,8 +181,7 @@ function refresh() {
   
   add.innerHTML = "";
   $(add).load("http://localhost/YourChoice/add.php");
-
 }
 
-//refresh every 1 sec
+//refresh every 2 sec
 setInterval(function(){ isnotthesame() }, 2000);
